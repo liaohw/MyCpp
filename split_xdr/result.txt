@@ -1,0 +1,36 @@
+~liaohw% a.out
+
+------------- test begin----------------
+---------- print -----------------
+        [test] startTime = 20100101120000,triggerType = 1,billDate = 20100301120000,treatFlag = 0
+        [test] startTime = 20100101120001,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120002,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120003,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120005,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120006,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120007,triggerType = 2,billDate = 20100301120001,treatFlag = 1
+        [test] startTime = 20100101120008,triggerType = 2,billDate = 20100301120001,treatFlag = 1
+        [test] startTime = 20100101120009,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120010,triggerType = 2,billDate = 20100301120002,treatFlag = 0
+        [test] startTime = 20100101120011,triggerType = 2,billDate = 20100301120002,treatFlag = 1
+        [test] startTime = 20100101120012,triggerType = 2,billDate = 20100301120002,treatFlag = 0
+---------- print -----------------
+        [test] startTime = 20100101120000,triggerType = 1,billDate = 20100301120000,treatFlag = 0
+new Group:
+        [test] startTime = 20100101120001,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120002,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120003,triggerType = 1,billDate = 20100301120001,treatFlag = 0
+new Group:
+        [test] startTime = 20100101120005,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120006,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+        [test] startTime = 20100101120009,triggerType = 2,billDate = 20100301120001,treatFlag = 0
+new Group:
+        [test] startTime = 20100101120007,triggerType = 2,billDate = 20100301120001,treatFlag = 1
+new Group:
+        [test] startTime = 20100101120008,triggerType = 2,billDate = 20100301120001,treatFlag = 1
+new Group:
+        [test] startTime = 20100101120010,triggerType = 2,billDate = 20100301120002,treatFlag = 0
+        [test] startTime = 20100101120012,triggerType = 2,billDate = 20100301120002,treatFlag = 0
+new Group:
+        [test] startTime = 20100101120011,triggerType = 2,billDate = 20100301120002,treatFlag = 1
+------------- test end----------------
