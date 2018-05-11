@@ -5,7 +5,8 @@
 using namespace std;
 
 /*
-和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。
+和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。
+代价是需要额外的内存空间。
 
 (1)算法简介
 归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。
@@ -27,7 +28,31 @@ void print(const char* str, const int* arr){
 	cout<<endl;
 }
 void merge(int arr[], int left, int mid, int right){
-	
+	int len = right - left + 1;
+	int* newArr = new int[len];
+	for(int i = 0; i < len; i++){
+		newArr[i] = arr[left+i];
+	}
+	int i = left;		//前子数组下标
+	int j = mid + 1;	//后子数组下标
+	for(int k = left; k <= right; k++){
+		if(i > mid){
+			arr[k] = newArr[j - left];
+			j++;
+		}
+		else if(j > right){
+			arr[k] = newArr[i - left];
+			i++;
+		}
+		else if(newArr[i - left] < newArr[j - left]){
+			arr[k] = newArr[i - left];
+			i++;
+		}
+		else{
+			arr[k] = newArr[j - left];
+			j++;
+		}
+	}
 }
 void mergeSort(int arr[],int left,int right){
 	if(left >= right) return;
@@ -44,7 +69,6 @@ int main()
 	mergeSort(arr,0,len-1);
 	
 	print("===================== 1.排序=>:",arr);
-	cout<<"遍历次数:"<<total<<", 交换次数:"<<change<<endl;
     return 0;  
 } 
 
